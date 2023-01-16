@@ -9,7 +9,7 @@ class ProductManager {
         if (!title || !description || !price || !thumbnail || !code || !stock) return console.error(`Todos los campos son necesarios`)
 
         for (let i = 0; i < this.products.length; i++) {
-            if (this.products[i].code === code) return console.error(`Codigo ${code} repetido`)}
+            if (this.products[i].code === code) return console.error(`Codigo ${code} repetido, favor de insertar codigo diferente`)}
         
         this.products.push({
         title,
@@ -66,21 +66,22 @@ productos.addProduct(
 )
 
 // PRUEBA DE CODIGO REPETIDO
-/* 
+/*
 productos.addProduct(
     "DOOM",
     "Juego de ID software",
     100,
     "Doom.jpg",
-    "456789",                   <---         
+    "456789",                 //<---         
     10
 )
 */
 
+
 // PRODUCTOS AÑADIDOS
 console.log(productos.getProducts())
 
-// OBTENER PRODUCTOS MEDIANTE EL ID 
+// OBTENER PRODUCTO MEDIANTE EL ID 
 console.log(productos.getProductsById(2))  /* insertar numero del ID */
 
 
